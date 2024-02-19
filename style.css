@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+:root{
+    --body-bg: hsl(210, 60%, 98%);
+    --board-bg: hsl(0, 0%, 100%);
+    --primary-text: hsl(219, 12%, 42%);
+    --user-name: hsl(224, 21%, 14%);
+    --time-text: hsl(219, 14%, 63%);
+    --count-text: hsl(205, 33%, 90%);
+    --msg-border: hsl(211, 68%, 94%);
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+
+}
+body{
+    background: var(--body-bg);
+    width: 100%;
+    min-height: 100vh;
+}
+.notificationBox{
+    width: 100%;
+    max-width: 600px;
+    background: var(--board-bg);
+    margin: 20px auto 20px;
+    padding: 20px 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0px 4px 8px rgba(0,0,0,0.01);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 27px;
+}
+header h1{
+    font-size: 20px;
+    font-weight: 800;
+}
+header h1 .count{
+    background: var(--count-text);
+    color: var(--blue);
+    border-radius: 5px;
+    padding: 2px 8px;
+    font-size: 15px;
+    margin-left: 5px;
+}
+header button{
+    border: none;
+  outline: none;
+  color: var(--primary-text);
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+}
+button:hover{
+    color: var(--blue);
+}
+.notificationBox a{
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    line-height: 1.2;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+a.unread{
+    background: var(--body-bg);
+}
+a img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.text-content p{
+    font-size: 14px;
+    color: var(--primary-text);
+    font-weight: 500;
+}
+p .user{
+    color: var(--user-name);
+    font-weight: 800;
+    margin-right: .2rem;
+    font-size: 14px;
+}
+p .activity{
+    font-weight: 800;
+    margin: 0 5px;
+    font-size: 13px;
+}
+p .chess{
+    color: var(--blue);
+}
+p.time{
+    color: var(--time-text);
+    font-size: 12px;
+    margin-top: 3px;
+}
+p .dot{
+
+        display: inline-block;
+        background: var(--red);
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        margin-left: .1rem;
+    }
+
+    p span:hover{
+        color: var(--blue);
+    }
+    p.private{
+        border: 1px solid var(--msg-border);
+        border-radius: 5px;
+        padding: 12px;
+        margin-top: 10px;
+    }
+   p.private:hover{
+        background: var(--count-text);
+    }
+    a .picture{
+        margin-left: auto;
+    }
+
+    footer{
+        font-size: .7rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    footer a{
+        color: var(--blue);
+    }
+    footer a:hover{
+        text-decoration: none;
+    }
+    @media (max-width:480px){
+        .notificationBox{
+            padding: 20px 40px 20px;
+        }
+    }
